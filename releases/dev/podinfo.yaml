@@ -15,8 +15,8 @@ spec:
     ref: master
   values:
     image:
-      repository: bdavidsonim/podinfo
-      tag: dev-jlwpbwub
+      repository: localhost:5001/podinfo
+      tag: dev-nxgbtrkb
     replicaCount: 1
     hpa:
       enabled: false
