@@ -15,7 +15,7 @@ spec:
     ref: master
   values:
     image:
-      repository: localhost:5001/podinfo
+      repository: bdavidsonim/podinfo
       tag: stg-9ij63o4c
     replicaCount: 2
     hpa:

@@ -15,7 +15,7 @@ spec:
     ref: master
   values:
     image:
-      repository: localhost:5001/podinfo
+      repository: bjdavidsonim/podinfo
       tag: dev-nxgbtrkb
     replicaCount: 1
     hpa:
