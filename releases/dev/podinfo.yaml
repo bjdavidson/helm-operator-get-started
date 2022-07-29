@@ -16,7 +16,7 @@ spec:
   values:
     image:
       repository: bdavidsonim/podinfo
-      tag: dev-e
+      tag: dev-d954970c
     replicaCount: 1
     hpa:
       enabled: false
