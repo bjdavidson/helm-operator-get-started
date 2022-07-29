@@ -15,8 +15,8 @@ spec:
     ref: master
   values:
     image:
-      repository: bjdavidsonim/podinfo
-      tag: dev-nxgbtrkb
+      repository: bdavidsonim/podinfo
+      tag: dev-e
     replicaCount: 1
     hpa:
       enabled: false
