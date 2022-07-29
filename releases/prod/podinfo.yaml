@@ -15,6 +15,6 @@ spec:
     ref: master
   values:
     image:
-            repository: bdavidsonim/podinfo
+      repository: bdavidsonim/podinfo
       tag: 0.4.11
     replicaCount: 3
