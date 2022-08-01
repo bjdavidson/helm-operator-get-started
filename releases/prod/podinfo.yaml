@@ -21,8 +21,8 @@ spec:
   releaseName: podinfo-prod
   chart:
     spec:
-      chart: prodinfo
-      version: 3.1.5
+      chart: podinfo
+      version: 3.1.6
       sourceRef:
         kind: HelmRepository
         name: podinfo-prod
