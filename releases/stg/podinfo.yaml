@@ -1,5 +1,14 @@
 ---
-apiVersion: helm.fluxcd.io/v1
+apiVersion: source.toolkit.fluxcd.io/v1beta2
+kind: HelmRepository
+metadata:
+  name: podinfo-rc
+  namespace: stg
+spec:
+  interval: 10m
+  url: https://stefanprodan.github.io/podinfo/
+---
+apiVersion: helm.toolkit.fluxcd.io/v2beta1
 kind: HelmRelease
 metadata:
   name: podinfo-rc
@@ -8,15 +17,17 @@ metadata:
     fluxcd.io/automated: "true"
     filter.fluxcd.io/chart-image: glob:stg-*
 spec:
+  interval: 5m
   releaseName: podinfo-rc
   chart:
-    git: git@github.com:bjdavidson/helm-operator-get-started
-    path: charts/podinfo
-    ref: master
+    spec:
+      chart: podinfo
+      version: 3.1.5
+      sourceRef:
+        kind: HelmRepository
+        name: podinfo-rc
+      interval: 10m
   values:
-    image:
-      repository: bdavidsonim/podinfo
-      tag: stg-dea4ab5c
     replicaCount: 2
     hpa:
       enabled: true
